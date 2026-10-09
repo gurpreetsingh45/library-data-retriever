@@ -1,17 +1,28 @@
-import useSWR from 'swr';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { Pagination, Table } from 'react-bootstrap';
-import PageHeader from '@/components/PageHeader';
+/*********************************************************************************
+ * WEB422 – Assignment 1
+ *
+ * I declare that this assignment is my own work in accordance with Seneca's
+ * Academic Integrity Policy:
+ *
+ * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+ *
+ * Name: Gurpreet Singh Student ID: 143124246 Date: 09-10-2026
+ *
+ ********************************************************************************/
+import useSWR from "swr";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
+import { Pagination, Table } from "react-bootstrap";
+import PageHeader from "@/components/PageHeader";
 
 export default function Home() {
   const [page, setPage] = useState(1);
   const router = useRouter();
-  const author = 'Terry Pratchett';
+  const author = "Terry Pratchett";
 
   const { data, error } = useSWR(
     `https://openlibrary.org/search.json?q=author:${encodeURIComponent(author)}&page=${page}&limit=10&fields=key,title,first_publish_year`,
-    { keepPreviousData: true }
+    { keepPreviousData: true },
   );
 
   function previous() {
@@ -39,7 +50,7 @@ export default function Home() {
           {data?.docs?.map((book) => (
             <tr key={book.key} onClick={() => router.push(book.key)}>
               <td>{book.title}</td>
-              <td>{book.first_publish_year || 'N/A'}</td>
+              <td>{book.first_publish_year || "N/A"}</td>
             </tr>
           ))}
         </tbody>
