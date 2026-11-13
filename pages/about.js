@@ -29,7 +29,7 @@ export default function About(props) {
         </Card.Body>
       </Card>
       <br />
-      <BookDetails book={props.book} />
+      <BookDetails book={props.book} workId="OL453657W" showFavouriteBtn={false} />
     </>
   );
 }
