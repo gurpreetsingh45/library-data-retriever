@@ -2,6 +2,7 @@ import { useAtom } from 'jotai';
 import { Row, Col } from 'react-bootstrap';
 import { favouritesAtom } from '@/store';
 import PageHeader from '@/components/PageHeader';
+import BookCard from '@/components/BookCard';
 
 export default function Favourites() {
   const [favouritesList] = useAtom(favouritesAtom);
@@ -20,9 +21,8 @@ export default function Favourites() {
       <PageHeader text="Favourites" subtext="Your Favourite Books" />
       <Row className="gy-4">
         {favouritesList.map((workId) => (
-          // Placeholder until the BookCard component is added in part 3
           <Col lg={3} md={6} key={workId}>
-            {workId}
+            <BookCard workId={workId} />
           </Col>
         ))}
       </Row>
