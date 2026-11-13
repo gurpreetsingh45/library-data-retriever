@@ -17,14 +17,14 @@ export default function About(props) {
       <Card className="bg-light">
         <Card.Body>
           <p>
-            I'm Gurpreet Singh, a student studying Computer Programming program
+            I&apos;m Gurpreet Singh, a student studying Computer Programming program
             at Seneca, currently taking course WEB422. This app uses React,
             Next.js and React-Bootstrap to browse data from the Open Library API.
           </p>
           <p>
             The book featured below is <em>{props.book.title}</em>, the first
-            novel in Terry Pratchett's Discworld series. You can{' '}
-            <Link href="/">browse more of his novels</Link> on the home page.
+            novel in Terry Pratchett&apos;s Discworld series. You can{' '}
+            <Link href="/books">browse more of his novels</Link>.
           </p>
         </Card.Body>
       </Card>
