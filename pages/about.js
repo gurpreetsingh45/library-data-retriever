@@ -24,7 +24,7 @@ export default function About(props) {
           <p>
             The book featured below is <em>{props.book.title}</em>, the first
             novel in Terry Pratchett&apos;s Discworld series. You can{' '}
-            <Link href="/books">browse more of his novels</Link>.
+            <Link href="/books?author=Terry%20Pratchett">browse more of his novels</Link>.
           </p>
         </Card.Body>
       </Card>
