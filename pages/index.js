@@ -1,4 +1,4 @@
-/*********************************************************************************
+/********************************************************************************
  * WEB422 – Assignment 02
  *
  * I declare that this assignment is my own work in accordance with Seneca's
@@ -6,7 +6,7 @@
  *
  * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
  *
- * Name: Gurpreet Singh Student ID:  Date:
+ * Name: Gurpreet Singh Student ID: 143124246 Date: 15-11-2026
  *
  ********************************************************************************/
 import { useRouter } from "next/router";
